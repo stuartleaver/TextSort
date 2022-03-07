@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace SimpleTest
 {
-    public static class ThisIsATest
+    public static class MyTest
     {
-        public static string OrderSomeSomeWords(string someInput)
+        public static string SomeNoddyTest(string someInput)
         {
             if (someInput == "Go baby, go")
             {

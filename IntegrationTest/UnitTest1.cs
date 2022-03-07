@@ -9,13 +9,13 @@ namespace IntegrationTest
         [TestMethod]
         public void SimpleTest1()
         {
-            Assert.AreEqual("baby Go go", SimpleTest.ThisIsATest.OrderSomeSomeWords("Go baby, go"));
+            Assert.AreEqual("baby Go go", SimpleTest.MyTest.SomeNoddyTest("Go baby, go"));
         }
 
         [TestMethod]
         public void SimpleTest2()
         {
-            Assert.AreEqual("ABC aBc abc CBA CBA cba", SimpleTest.ThisIsATest.OrderSomeSomeWords("CBA, abc aBc ABC cba CBA."));
+            Assert.AreEqual("ABC aBc abc CBA CBA cba", SimpleTest.MyTest.SomeNoddyTest("CBA, abc aBc ABC cba CBA."));
         }
 
     }
