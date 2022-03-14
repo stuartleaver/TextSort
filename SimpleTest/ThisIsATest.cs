@@ -6,21 +6,41 @@ using System.Threading.Tasks;
 
 //simple test
 
-//ABC ORDER
+//Test 
 
 
 namespace SimpleTest
 {
     public static class MyTest
     {
-        public static string SomeNoddyTest(string someInput)
+        public static string CalculateTotal(string someInput)
         {
-            if (someInput == "Go baby, go")
+            if (someInput == null)
             {
+                throw new DataMisalignedException("data not correct");
+            }
+            var log = new ConsoleLogger();
+            log.Log("start CalculateTotal");
+            if (someInput == "Go baby, go")
+            {                
                 return "baby Go go";
             }
-
-            return someInput;
+            log.Log("end CalculateTotal");
+            return someInput;            
         }
+
+        private interface ILogger
+        {
+            void Log(string stuff);
+        }
+
+        internal class ConsoleLogger : ILogger
+        {
+            public void Log(string stuff)
+            {
+                Console.WriteLine(stuff);
+            }
+        }
+
     }
 }

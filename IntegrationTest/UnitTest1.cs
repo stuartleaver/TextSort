@@ -8,15 +8,14 @@ namespace IntegrationTest
     {
         [TestMethod]
         public void SimpleTest1()
-        {
-            Assert.AreEqual("baby Go go", SimpleTest.MyTest.SomeNoddyTest("Go baby, go"));
+        {        
+            Assert.AreEqual("baby Go go", SimpleTest.MyTest.CalculateTotal("Go baby, go"));
         }
 
         [TestMethod]
         public void SimpleTest2()
         {
-            Assert.AreEqual("ABC aBc abc CBA CBA cba", SimpleTest.MyTest.SomeNoddyTest("CBA, abc aBc ABC cba CBA."));
+            Assert.AreEqual("ABC aBc abc CBA CBA cba", SimpleTest.MyTest.CalculateTotal("CBA, abc aBc ABC cba CBA."));
         }
-
     }
 }
