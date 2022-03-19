@@ -15,11 +15,12 @@ namespace SimpleTest
     {
         public static string CalculateTotal(string someInput)
         {
+            var log = new ConsoleLogger();
             if (someInput == null)
             {
                 throw new DataMisalignedException("data not correct");
             }
-            var log = new ConsoleLogger();
+            
             log.Log("start CalculateTotal");
             if (someInput == "Go baby, go")
             {                

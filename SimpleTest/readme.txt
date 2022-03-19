@@ -9,4 +9,9 @@
 //so that I can easily scan though the words  alphabetically
 
 //if needed additional unit tests may be added
+
 //insure you are happy with the project structure
+
+//take into account we may want to swap console logger with event logger in future
+
+//although this is a simple test, please complete the code as you would for a production release
