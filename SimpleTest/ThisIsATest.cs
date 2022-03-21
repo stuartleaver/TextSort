@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace SimpleTest
 {
-    public static class MyTest
+    public static partial class MyTest
     {
         public static string CalculateTotal(string someInput)
         {
@@ -28,11 +28,6 @@ namespace SimpleTest
             }
             log.Log("end CalculateTotal");
             return someInput;            
-        }
-
-        private interface ILogger
-        {
-            void Log(string stuff);
         }
 
         internal class ConsoleLogger : ILogger
