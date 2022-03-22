@@ -34,6 +34,6 @@ namespace IntegrationTest
         public void SimpleTest2()
         {
             Assert.AreEqual("ABC aBc abc CBA CBA cba", SimpleTest.MyTest.CalculateTotal("CBA, abc aBc ABC cba CBA."));
-        
+        }
     }
 }
