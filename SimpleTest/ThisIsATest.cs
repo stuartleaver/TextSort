@@ -22,10 +22,13 @@ namespace SimpleTest
             }
             
             log.Log("start CalculateTotal");
+
+            //algorithm
             if (someInput == "Go baby, go")
             {                
                 return "baby Go go";
             }
+
             log.Log("end CalculateTotal");
             return someInput;            
         }
