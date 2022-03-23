@@ -6,7 +6,7 @@
 * I want to reorder and reformat a paragrap of text as follows:
     *	words should be reordered Alphabetically -  (Zerbra Abba) becomes (Abba Zebra)
     *	words should **THEN** be ordered from upper case to lower case. Note point 1 takes preference. (aBba Abba) becomes (Abba aBba)
-    * remove all (.,;') chars. (aBba, ABba) becomes (Abba aBba)
+    * remove all (.,;') chars. (aBba, Abba) becomes (Abba aBba)
     *	Do not remove duplicate words
 * so that I can easily read though the words alphabetically and easily see all the variants of different case
 
