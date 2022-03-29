@@ -18,9 +18,9 @@ public class TextAbcSort
 
         _logger.Log("Start sorting text alphabetically");
 
-        var result = RemoveUnwantedCharacters(input);
+        var formattedInput = RemoveUnwantedCharacters(input);
 
-        var words = SortWordsAlphabetically(result);
+        var sortedWords = SortWordsAlphabetically(formattedInput);
 
         // Not removing the following code as it was the initial implementation
 
@@ -40,7 +40,7 @@ public class TextAbcSort
         //    words.RemoveAll(x => wordGroup.Contains(x));
         //}
 
-        result = string.Join(" ", words);
+        var result = string.Join(" ", sortedWords);
 
         _logger.Log("Finished sorting text alphabetically");
 
