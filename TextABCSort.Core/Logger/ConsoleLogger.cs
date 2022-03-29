@@ -1,4 +1,4 @@
-﻿namespace SimpleTest.Logger;
+﻿namespace TextABCSort.Core.Logger;
 
 public class ConsoleLogger : ILogger
 {

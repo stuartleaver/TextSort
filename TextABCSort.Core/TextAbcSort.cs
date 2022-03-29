@@ -1,6 +1,6 @@
-﻿using SimpleTest.Logger;
+﻿using TextABCSort.Core.Logger;
 
-namespace SimpleTest;
+namespace TextABCSort.Core;
 
 public class TextAbcSort
 {
