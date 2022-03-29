@@ -1,4 +1,4 @@
-﻿using TextABCSort.Core.Logger;
+﻿using TextABCSort.Logging;
 
 namespace TextABCSort.Core;
 

@@ -2,7 +2,7 @@
 using FakeItEasy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TextABCSort.Core;
-using TextABCSort.Core.Logger;
+using TextABCSort.Logging;
 
 namespace TextABCSort.UnitTests;
 

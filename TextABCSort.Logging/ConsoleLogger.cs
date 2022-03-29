@@ -1,4 +1,4 @@
-﻿namespace TextABCSort.Core.Logger;
+﻿namespace TextABCSort.Logging;
 
 public class ConsoleLogger : ILogger
 {
