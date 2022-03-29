@@ -15,17 +15,14 @@ public class TextAbcSort
     {
         if (string.IsNullOrEmpty(input))
         {
-            throw new DataMisalignedException("data not correct");
+            throw new ArgumentNullException("Input string is either null or empty");
         }
 
-        _logger.Log("Start text sorting");
+        _logger.Log("Start sorting text alphabetically");
 
-        var result = input;
+        var result = RemoveUnwantedCharacters(input);
 
-        result = RemoveUnwantedCharacters(result);
-
-        // Split and order the input string into a list
-        var words = result.Split(" ").OrderBy(x => x, StringComparer.OrdinalIgnoreCase).ThenBy(y => y, StringComparer.Ordinal);
+        var words = SortWordsAlphabetically(result);
 
         // Not removing the following code as it was the initial implementation
 
@@ -45,16 +42,17 @@ public class TextAbcSort
         //    words.RemoveAll(x => wordGroup.Contains(x));
         //}
 
-        // Create the result by joining the words
         result = string.Join(" ", words);
 
-        _logger.Log("End text sorting");
+        _logger.Log("Finished sorting text alphabetically");
 
         return result;
     }
 
     private static string RemoveUnwantedCharacters(string result)
     {
+        // The characters to remove are currently included below making changes more difficult. So an improvement
+        // would be to make then configurable
         string[] charactersToRemove = { "(", ".", ",", ";", "'", ")" };
 
         foreach (var character in charactersToRemove)
@@ -63,5 +61,13 @@ public class TextAbcSort
         }
 
         return result;
+    }
+
+    private static IEnumerable<string> SortWordsAlphabetically(string result)
+    {
+        var sortedWords = result.Split(" ").OrderBy(x => x, StringComparer.OrdinalIgnoreCase)
+            .ThenBy(y => y, StringComparer.Ordinal);
+
+        return sortedWords;
     }
 }
