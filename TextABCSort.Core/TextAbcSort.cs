@@ -1,6 +1,4 @@
-﻿using TextABCSort.Logging;
-
-namespace TextABCSort.Core;
+﻿namespace TextABCSort.Core;
 
 public class TextAbcSort
 {

@@ -1,10 +1,4 @@
-﻿using System;
-using FakeItEasy;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TextABCSort.Core;
-using TextABCSort.Logging;
-
-namespace TextABCSort.UnitTests;
+﻿namespace TextABCSort.UnitTests;
 
 [TestClass]
 public class TextAbcSortTests
