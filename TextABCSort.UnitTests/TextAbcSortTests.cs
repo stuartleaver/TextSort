@@ -16,7 +16,7 @@ public class TextAbcSortTests
     }
 
     [TestMethod]
-    public void TestAbcSort_ShouldReturnOrderedWords_WhenPassedAString()
+    public void TextAbcSort_ShouldReturnOrderedWords_WhenPassedAString()
     {
         // Arrange
         var input = "Zoom Boom";
@@ -30,7 +30,7 @@ public class TextAbcSortTests
     }
 
     [TestMethod]
-    public void TestAbcSort_ShouldReturnCaseOrderedWords_WhenPassedAString()
+    public void TextAbcSort_ShouldReturnCaseOrderedWords_WhenPassedAString()
     {
         // Arrange
         var input = "boom Boom";
@@ -44,7 +44,7 @@ public class TextAbcSortTests
     }
 
     [TestMethod]
-    public void TestAbcSort_ShouldReturnRemoveInvalidChars_WhenPassedAString()
+    public void TextAbcSort_ShouldReturnRemoveInvalidChars_WhenPassedAString()
     {
         // Arrange
         var input = "b, b";
@@ -58,7 +58,7 @@ public class TextAbcSortTests
     }
 
     [TestMethod]
-    public void TestAbcSort_ShouldReturnOrderedWords_WhenPassedASimpleTest1()
+    public void TextAbcSort_ShouldReturnOrderedWords_WhenPassedASimpleTest1()
     {
         // Arrange
         var input = "Go baby, go";
@@ -72,7 +72,7 @@ public class TextAbcSortTests
     }
 
     [TestMethod]
-    public void TestAbcSort_ShouldReturnOrderedWords_WhenPassedASimpleTest2()
+    public void TextAbcSort_ShouldReturnOrderedWords_WhenPassedASimpleTest2()
     {
         // Arrange
         var input = "CBA, abc aBc ABC cba CBA.";
@@ -86,7 +86,7 @@ public class TextAbcSortTests
     }
 
     [TestMethod]
-    public void TestAbcSort_ShouldCallTheLoggerTwiceWithTheCorrectMessages_WhenPassedASimpleTest()
+    public void TextAbcSort_ShouldCallTheLoggerTwiceWithTheCorrectMessages_WhenPassedASimpleTest()
     {
         // Arrange
         var input = "Go baby, go";
@@ -101,7 +101,7 @@ public class TextAbcSortTests
 
     [TestMethod]
     [ExpectedException(typeof(ArgumentNullException))]
-    public void TestAbcSort_ShouldReturnArgumentNullException_WhenPassedAnEmptyString()
+    public void TextAbcSort_ShouldReturnArgumentNullException_WhenPassedAnEmptyString()
     {
         // Arrange
         var input = "";
