@@ -2,8 +2,8 @@
 
 public class ConsoleLogger : ILogger
 {
-    public void Log(string stuff)
+    public void Log(string message)
     {
-        Console.WriteLine(stuff);
+        Console.WriteLine(message);
     }
 }

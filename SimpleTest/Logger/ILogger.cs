@@ -2,6 +2,6 @@ namespace SimpleTest.Logger
 {
     public interface ILogger
     {
-        void Log(string stuff);
+        void Log(string message);
     }
 }
