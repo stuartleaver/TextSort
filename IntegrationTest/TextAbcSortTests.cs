@@ -1,4 +1,5 @@
-﻿using FakeItEasy;
+﻿using System;
+using FakeItEasy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SimpleTest;
 using SimpleTest.Logger;
@@ -88,5 +89,32 @@ public class TextAbcSortTests
 
         // Assert
         Assert.AreEqual(expected, actual);
+    }
+
+    [TestMethod]
+    public void TestAbcSort_ShouldCallTheLoggerTwiceWithTheCorrectMessages_WhenPassedASimpleTest()
+    {
+        // Arrange
+        var input = "Go baby, go";
+
+        // Act
+        var actual = _textAbcSort.Sort(input);
+
+        // Assert
+        A.CallTo(() => _logger.Log("Start sorting text alphabetically")).MustHaveHappenedOnceExactly();
+        A.CallTo(() => _logger.Log("Finished sorting text alphabetically")).MustHaveHappenedOnceExactly();
+    }
+
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentNullException))]
+    public void TestAbcSort_ShouldReturnArgumentNullException_WhenPassedAnEmptyString()
+    {
+        // Arrange
+        var input = "";
+
+        // Act
+        var actual = _textAbcSort.Sort(input);
+
+        // Assert - Expects exception
     }
 }
